@@ -1,0 +1,8 @@
+semana3/
+│── index.html
+│── styles.css
+│── assets/
+│     ├── img/
+│     │     └── imagen1.jpg   (debes colocar aquí tu imagen)
+│     └── video/
+│           └── video1.mp4    (debes colocar aquí tu video)

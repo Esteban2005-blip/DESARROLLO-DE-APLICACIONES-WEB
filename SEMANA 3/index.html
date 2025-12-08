@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 3 - Página Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido a mi Página Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#informacion">Información</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- SECCIÓN INICIO -->
+        <section id="inicio">
+            <h2>Introducción al Proyecto</h2>
+            <p>
+                Este proyecto fue creado para practicar el uso de 
+                <strong>HTML5</strong> y etiquetas <em>semánticas</em>.
+            </p>
+
+            <!-- IMAGEN AGREGADA -->
+            <img 
+                src="https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg" 
+                alt="Imagen sobre el uso de imágenes en sitios web"
+                width="600"
+            >
+        </section>
+
+        <!-- SECCIÓN INFORMACIÓN -->
+        <section id="informacion">
+            <h2>Contenido del Sitio</h2>
+
+            <!-- ARTÍCULO DE LISTAS -->
+            <article>
+                <h3>Listas</h3>
+                <p>A continuación una lista ordenada y una desordenada:</p>
+
+                <ol>
+                    <li>Primer elemento</li>
+                    <li>Segundo elemento</li>
+                    <li>Tercer elemento</li>
+                </ol>
+
+                <ul>
+                    <li>Elemento A</li>
+                    <li>Elemento B</li>
+                    <li>Elemento C</li>
+                </ul>
+            </article>
+
+            <!-- ARTÍCULO DE TABLA -->
+            <article>
+                <h3>Tabla de Ejemplo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>María</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos</td>
+                            <td>25</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <!-- ARTÍCULO DE VIDEO -->
+            <article>
+                <h3>Video del Proyecto</h3>
+
+                <!-- VIDEO GOOGLE DRIVE -->
+                <iframe 
+                    src="https://drive.google.com/file/d/1yCL1osAX3tu9BwCjgyMRYgn5nE39uohR/preview" 
+                    width="560" 
+                    height="315" 
+                    allow="autoplay">
+                </iframe>
+
+            </article>
+
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto">
+            <h2>Formulario de Contacto</h2>
+
+            <form>
+                <label>Nombre:</label><br>
+                <input type="text" name="nombre"><br><br>
+
+                <label>Correo:</label><br>
+                <input type="email" name="correo"><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 - Mi Proyecto Semana 3</p>
+        <a href="https://www.google.com" target="_blank">Visitar Google</a>
+    </footer>
+
+</body>
+</html>
+
+
+
