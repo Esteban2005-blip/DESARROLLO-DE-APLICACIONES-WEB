@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Botón personalizado */
+.btn-primary {
+    background-color: #ff5733;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+}
+
+/* Animación hover */
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
+
+/* Media Query personalizada */
+@media (max-width: 576px) {
+    body {
+        background-color: #f8f9fa;
+    }
+
+    h1 {
+        color: #ff5733;
+    }
+}
