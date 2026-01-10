@@ -1,37 +1,45 @@
 body {
     font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-/* Botón personalizado */
-.btn-primary {
-    background-color: #ff5733;
-    border: none;
+.controls {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px;
+    width: 300px;
+}
+
+button {
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.btn-primary:hover {
+.gallery img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Cards */
-.card {
-    border-radius: 15px;
-}
-
-/* Animación hover */
-.card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s;
-}
-
-/* Media Query personalizada */
-@media (max-width: 576px) {
-    body {
-        background-color: #f8f9fa;
-    }
-
-    h1 {
-        color: #ff5733;
-    }
+.selected {
+    box-shadow: 0 0 15px 5px #007bff;
+    border: 3px solid #007bff;
 }
