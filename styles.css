@@ -1,37 +1,46 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f4f4f4;
 }
 
-/* Botón personalizado */
-.btn-primary {
-    background-color: #ff5733;
-    border: none;
-    transition: transform 0.3s, box-shadow 0.3s;
+h1 {
+    text-align: center;
 }
 
-.btn-primary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+form {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* Cards */
-.card {
-    border-radius: 15px;
+.input-group {
+    margin-bottom: 15px;
 }
 
-/* Animación hover */
-.card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s;
+label {
+    font-weight: bold;
 }
 
-/* Media Query personalizada */
-@media (max-width: 576px) {
-    body {
-        background-color: #f8f9fa;
-    }
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
 
-    h1 {
-        color: #ff5733;
-    }
+input.valid {
+    border-color: green;
+}
+
+input.invalid {
+    border-color: red;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
 }
