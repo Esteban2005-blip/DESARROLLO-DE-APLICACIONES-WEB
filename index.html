@@ -2,55 +2,17 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario con Validaciones JS</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Lista Dinámica de Productos</title>
 </head>
 <body>
 
-    <h1>Registro de Usuario</h1>
+    <h1>Lista de Productos</h1>
 
-    <form id="registroForm" novalidate>
+    <ul id="listaProductos">
+        <!-- Los productos se generarán dinámicamente aquí -->
+    </ul>
 
-        <!-- NOMBRE -->
-        <div class="input-group">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre">
-            <span class="error" id="errorNombre"></span>
-        </div>
-
-        <!-- CORREO -->
-        <div class="input-group">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email">
-            <span class="error" id="errorEmail"></span>
-        </div>
-
-        <!-- CONTRASEÑA -->
-        <div class="input-group">
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password">
-            <span class="error" id="errorPassword"></span>
-        </div>
-
-        <!-- CONFIRMAR CONTRASEÑA -->
-        <div class="input-group">
-            <label for="confirmPassword">Confirmar contraseña:</label>
-            <input type="password" id="confirmPassword">
-            <span class="error" id="errorConfirm"></span>
-        </div>
-
-        <!-- EDAD -->
-        <div class="input-group">
-            <label for="edad">Edad:</label>
-            <input type="number" id="edad">
-            <span class="error" id="errorEdad"></span>
-        </div>
-
-        <button type="submit" id="btnEnviar" disabled>Enviar</button>
-        <button type="reset">Reiniciar</button>
-
-    </form>
+    <button id="btnAgregar">Agregar Producto</button>
 
     <script src="script.js"></script>
 </body>
