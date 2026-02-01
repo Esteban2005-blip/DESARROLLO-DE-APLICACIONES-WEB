@@ -1,46 +1,18 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    background: #f4f4f4;
+/* Personalización propia: tarjeta con color suave y borde */
+.bg-custom {
+  border: 2px solid rgba(25, 135, 84, 0.25);
+  background: linear-gradient(135deg, rgba(25, 135, 84, 0.08), rgba(13, 110, 253, 0.06));
 }
 
-h1 {
-    text-align: center;
+/* Ajuste para el carrusel */
+.object-cover {
+  height: 420px;
+  object-fit: cover;
 }
 
-form {
-    max-width: 400px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-label {
-    font-weight: bold;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 2px solid #ccc;
-}
-
-input.valid {
-    border-color: green;
-}
-
-input.invalid {
-    border-color: red;
-}
-
-.error {
-    color: red;
-    font-size: 14px;
+/* Responsive extra para móviles */
+@media (max-width: 576px) {
+  .object-cover {
+    height: 260px;
+  }
 }
