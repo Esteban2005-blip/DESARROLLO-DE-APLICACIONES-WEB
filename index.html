@@ -1,19 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Lista Dinámica de Productos</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Interactiva con Bootstrap y JavaScript</title>
+
+  <!-- Bootstrap CSS (v5) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <!-- NAV / ENCABEZADO -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">Semana 8 · Bootstrap + JS</a>
 
-    <h1>Lista de Productos</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+          aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <ul id="listaProductos">
-        <!-- Los productos se generarán dinámicamente aquí -->
-    </ul>
+        <div id="navMenu" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#carrusel">Carrusel</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tabla">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <button id="btnAgregar">Agregar Producto</button>
+  <!-- CONTENIDO -->
+  <main id="inicio">
+    <!-- HERO -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h1 class="display-6 fw-bold">Creación de una Página Web Interactiva</h1>
+            <p class="lead mb-3">
+              Este proyecto integra componentes de <strong>Bootstrap</strong> con interactividad en <strong>JavaScript</strong>.
+              Incluye carrusel, tabla, formulario con validación y un botón con alerta personalizada.
+            </p>
+            <button id="btnAlerta" class="btn btn-primary btn-lg">
+              Mostrar alerta
+            </button>
+          </div>
+          <div class="col-lg-5">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h2 class="h5 mb-2">Checklist</h2>
+                <ul class="mb-0">
+                  <li>Menú con 3 enlaces</li>
+                  <li>Carrusel Bootstrap</li>
+                  <li>Tabla de productos</li>
+                  <li>Formulario + validación JS</li>
+                  <li>Footer con redes/contacto</li>
+                  <li>CSS propio</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- CARRUSEL -->
+    <section id="carrusel" class="py-5">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-4">Carrusel de Imágenes</h2>
+
+        <div id="carouselExample" class="carousel slide shadow-sm rounded-4 overflow-hidden" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=60"
+                class="d-block w-100 object-cover"
+                alt="Personas trabajando en equipo en una oficina"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Diseño Responsivo</h5>
+                <p>Bootstrap facilita la adaptación a móviles y escritorio.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600&q=60"
+                class="d-block w-100 object-cover"
+                alt="Persona usando laptop en un espacio de trabajo"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Componentes Reutilizables</h5>
+                <p>Botones, tablas, formularios y más.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=60"
+                class="d-block w-100 object-cover"
+                alt="Circuitos y tecnología"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Interactividad</h5>
+                <p>JavaScript añade dinamismo a la interfaz.</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLA -->
+    <section id="tabla" class="py-5 bg-light">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+          <h2 class="h3 fw-bold mb-0">Tabla de Productos (Datos Ficticios)</h2>
+          <span class="badge text-bg-secondary">Bootstrap table</span>
+        </div>
+
+        <div class="table-responsive shadow-sm rounded-4 bg-white p-2">
+          <table class="table table-striped table-hover align-middle mb-0">
+            <thead class="table-dark">
+              <tr>
+                <th>#</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th class="text-end">Precio</th>
+                <th class="text-center">Stock</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Audífonos Inalámbricos</td>
+                <td>Electrónica</td>
+                <td class="text-end">$29.99</td>
+                <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Cuaderno Universitario</td>
+                <td>Oficina</td>
+                <td class="text-end">$3.50</td>
+                <td class="text-center"><span class="badge text-bg-success">Disponible</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Mouse Ergonómico</td>
+                <td>Computación</td>
+                <td class="text-end">$12.00</td>
+                <td class="text-center"><span class="badge text-bg-warning text-dark">Poco stock</span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Cargador Tipo C</td>
+                <td>Accesorios</td>
+                <td class="text-end">$8.25</td>
+                <td class="text-center"><span class="badge text-bg-danger">Agotado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-muted mt-3 mb-0">
+          Nota: La tabla usa clases de Bootstrap para estilo y responsividad.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="contacto" class="py-5">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-4">Formulario de Contacto</h2>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card shadow-sm rounded-4">
+              <div class="card-body p-4">
+                <form id="contactForm" novalidate>
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre *</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Ej: Esteban Paredes" />
+                    <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="correo" class="form-label">Correo electrónico *</label>
+                    <input type="email" id="correo" class="form-control" placeholder="ejemplo@correo.com" />
+                    <div class="invalid-feedback">Ingresa un correo válido.</div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje *</label>
+                    <textarea id="mensaje" class="form-control" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+                    <div class="invalid-feedback">El mensaje es obligatorio (mínimo 10 caracteres).</div>
+                  </div>
+
+                  <button type="submit" class="btn btn-success w-100">
+                    Enviar mensaje
+                  </button>
+
+                  <!-- Mensaje general -->
+                  <div id="formStatus" class="mt-3" role="status" aria-live="polite"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card shadow-sm rounded-4 bg-custom">
+              <div class="card-body p-4">
+                <h3 class="h5">Consejo</h3>
+                <p class="mb-2">
+                  La validación con JavaScript se realiza antes del envío. Si hay errores, se muestran mensajes claros.
+                </p>
+                <p class="mb-0">
+                  Además, esta tarjeta tiene un estilo personalizado en <code>styles.css</code>.
+                </p>
+              </div>
+            </div>
+
+            <div class="alert alert-info mt-4 mb-0">
+              <strong>Tip:</strong> Recuerda publicar tu carpeta en GitHub Pages.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">© <span id="year"></span> · Proyecto Semana 8</p>
+      <div class="d-flex gap-3">
+        <a class="link-light" href="#" aria-label="Facebook">Facebook</a>
+        <a class="link-light" href="#" aria-label="Instagram">Instagram</a>
+        <a class="link-light" href="#" aria-label="Correo">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS propio -->
+  <script src="script.js"></script>
 </body>
 </html>
